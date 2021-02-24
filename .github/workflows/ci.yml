@@ -33,7 +33,7 @@ jobs:
       - name: Install Graphviz
         run:  sudo apt-get install --no-install-recommends graphviz
 
-      # Not using OS package here because it's an old version
+      # Not using OS package here because it's always an old version
       - name: Install PlantUML
         run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
