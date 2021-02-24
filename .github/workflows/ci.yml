@@ -8,6 +8,7 @@ on:
 
 jobs:
   generate_images:
+    name: Generate Images
     runs-on: ubuntu-latest
     env:
       PLANTUML_VERSION: 1.2021.1
@@ -15,22 +16,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install PlantUML
+      - name: Install Java
         run: |
           sudo apt-get update
-
-          # Not using "apt-get install plantuml" because it's an old version
           sudo apt-get install default-jre-headless
 
           # Avoid Java logging "Created user preferences directory"
-          mkdir -p ~/.java/.userPrefs
-
+          #mkdir -p ~/.java/.userPrefs
+      
+      - name: Install PlantUML
+        run: |
+          # Not using "apt-get install plantuml" because it's an old version
           wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
       - name: Run PlantUML
         run: |
           java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -o generated_images examples/*.puml
-
+          ls -l generated_images
+          
       - name: Commit Images
         run: |
           git add generated_images/*
