@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'generated_images/**'
   workflow_dispatch:
   
 
@@ -31,6 +33,7 @@ jobs:
 
       - name: Run PlantUML
         run: |
+          ls -l examples/*.puml
           java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -o generated_images examples/*.puml
           ls -l generated_images
           
