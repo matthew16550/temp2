@@ -33,11 +33,15 @@ jobs:
 
       - name: Run PlantUML
         run: |
-          java -version
-          java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" --help
+          java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -help
           mkdir -p generated_images
           ls -l examples/*.puml
-          java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -o generated_images examples/*.puml
+          java \
+            -Djava.awt.headless=true \
+            -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
+            -verbose \
+            -o generated_images \
+            examples/*.puml
           ls -l generated_images
           
       - name: Commit Images
