@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'generated_images/**'
+      - 'docs/generated_images/**'
   workflow_dispatch:
   
 jobs:
@@ -12,6 +12,7 @@ jobs:
     name: Generate Images
     runs-on: ubuntu-latest
     env:
+      OUTPUT_DIR: docs/generated_images
       PLANTUML_VERSION: 1.2021.1
     steps:
       - name: Checkout
@@ -38,7 +39,7 @@ jobs:
         run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
       - name: Make output dir
-        run:  mkdir -p generated_images
+        run:  mkdir -p "${OUTPUT_DIR}"
 
       - name: Run PlantUML
         run:  |
@@ -46,14 +47,14 @@ jobs:
             -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
             -headless \
             -nometadata \
-            -o "${GITHUB_WORKSPACE}/generated_images" \
+            -o "${GITHUB_WORKSPACE}/${OUTPUT_DIR}" \
             -verbose \
             "examples/**.puml"
         
       - name: Git add new / changed files
         id: git_add
         run: |
-          git add -v generated_images/*.png
+          git add -v "${OUTPUT_DIR}/*.png"
           set +e
           git diff-index --cached HEAD --quiet
           echo "::set-output name=has_changes::$?"
