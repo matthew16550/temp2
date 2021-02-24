@@ -18,10 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Java
+      - name: Install OS Packages
         run: |
           sudo apt-get update
-          sudo apt-get install default-jre-headless
+          sudo apt-get install default-jre-headless graphviz
 
           # Avoid Java logging "Created user preferences directory"
           #mkdir -p ~/.java/.userPrefs
@@ -37,10 +37,10 @@ jobs:
           mkdir -p generated_images
           ls -l examples/*.puml
           java \
-            -Djava.awt.headless=true \
             -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
+            -headless
+            -o "${GITHUB_WORKSPACE}/generated_images" \
             -verbose \
-            -o generated_images \
             examples/*.puml
           ls -l generated_images
           
