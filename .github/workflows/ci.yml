@@ -45,8 +45,8 @@ jobs:
       - name: Push Changes
         run: |
           # TODO only if changes
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
           git add -v generated_images/*.png
-          git commit \
-            --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" \
-            --message "Update Generated Images"
+          git commit -m "Update Generated Images"
           git push
