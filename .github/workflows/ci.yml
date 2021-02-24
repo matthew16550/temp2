@@ -14,6 +14,11 @@ jobs:
     env:
       PLANTUML_VERSION: 1.2021.1
     steps:
+      - name: Configure Git
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
+          
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -43,12 +48,7 @@ jobs:
             -nometadata \
             -o "${GITHUB_WORKSPACE}/generated_images" \
             -verbose \
-            examples/*.puml
-
-      - name: Configure Git
-        run: |
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name  "github-actions[bot]"
+            "examples/**.puml"
         
       - name: Git add new / changed files
         id: git_add
