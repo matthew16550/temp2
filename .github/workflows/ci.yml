@@ -54,10 +54,12 @@ jobs:
         id: git_add
         run: |
           git add -v generated_images/*.png
-          [ -n "$(git diff --staged)" ] && echo "::set-output name=has_changes::true"
+          set +e
+          git diff-index --cached HEAD --quiet
+          echo "::set-output name=has_changes::$?"
 
       - name: Push changes
-        if: steps.git_add.outputs.has_changes == true
-        run: |
+        if: steps.git_add.outputs.has_changes == 1
+        run: | 
             git commit -m "Update Generated Images"
             git push
