@@ -18,10 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Update OS Package Lists
+      - name: Update OS package lists
         run:  sudo apt-get update
 
-      - name: Install OS Packages
+      - name: Install OS packages
         run:  sudo apt-get install default-jre-headless graphviz
       
       - name: Install PlantUML
@@ -40,13 +40,13 @@ jobs:
             -o "${GITHUB_WORKSPACE}/generated_images" \
             -verbose \
             examples/*.puml
-          ls -l generated_images
-          
-      - name: Push Changes
+
+      - name: Push changes
         run: |
-          # TODO only if changes
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
           git add -v generated_images/*.png
-          git commit -m "Update Generated Images"
-          git push
+          if [ -n "$(git diff --staged)" ]; then
+            git commit -m "Update Generated Images"
+            git push
+          fi
