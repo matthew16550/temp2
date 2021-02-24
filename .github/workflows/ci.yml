@@ -38,7 +38,8 @@ jobs:
           ls -l examples/*.puml
           java \
             -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
-            -headless
+            -headless \
+            -nometadata \
             -o "${GITHUB_WORKSPACE}/generated_images" \
             -verbose \
             examples/*.puml
