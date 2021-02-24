@@ -1,7 +1,8 @@
 @startuml
 
-
 !include ../includes/base.iuml
+
+title foo
 
 actor lorem as A
 participant dolor as P1
