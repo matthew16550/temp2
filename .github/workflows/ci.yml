@@ -18,12 +18,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install Java
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: 15
+          java-package: jre
+    
       - name: Update OS package lists
         run:  sudo apt-get update
 
       - name: Install OS packages
-        run:  sudo apt-get install default-jre-headless graphviz
-      
+        run:  sudo apt-get install graphviz
+      # default-jre-headless
       - name: Install PlantUML
         # Not using "apt-get install plantuml" because it's an old version
         run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
