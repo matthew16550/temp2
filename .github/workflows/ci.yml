@@ -7,7 +7,6 @@ on:
       - 'generated_images/**'
   workflow_dispatch:
   
-
 jobs:
   generate_images:
     name: Generate Images
@@ -18,20 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Java
+      - name: Setup Java
         uses: actions/setup-java@v1.4.3
         with:
           java-version: 15
-          java-package: jre
     
       - name: Update OS package lists
         run:  sudo apt-get update
 
-      - name: Install OS packages
-        run:  sudo apt-get install graphviz
-      # default-jre-headless
+      - name: Install Graphviz
+        run:  sudo apt-get install --no-install-recommends graphviz
+
+      # Not using OS package here because it's an old version
       - name: Install PlantUML
-        # Not using "apt-get install plantuml" because it's an old version
         run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
       - name: Make output dir
@@ -47,12 +45,19 @@ jobs:
             -verbose \
             examples/*.puml
 
-      - name: Push changes
+      - name: Configure Git
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
+        
+      - name: Git add new / changed files
+        id: git_add
+        run: |
           git add -v generated_images/*.png
-          if [ -n "$(git diff --staged)" ]; then
+          [ -n "$(git diff --staged)" ] && echo "::set-output name=has_changes::true"
+
+      - name: Push changes
+        if: steps.git_add.outputs.has_changes == true
+        run: |
             git commit -m "Update Generated Images"
             git push
-          fi
