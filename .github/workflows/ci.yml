@@ -33,6 +33,7 @@ jobs:
 
       - name: Run PlantUML
         run: |
+          mkdir -p generated_images
           ls -l examples/*.puml
           java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -o generated_images examples/*.puml
           ls -l generated_images
