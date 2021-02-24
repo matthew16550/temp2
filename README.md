@@ -1,9 +1,9 @@
-# temp2
+# Base Theme
 
 <img src="generated_images/base.png" alt="TODO" width="250"/>
 
-[Mimeograph](includes/mimeograph.iuml)
-<figure>
-  <img src="generated_images/mimeograph.png" alt="" width="250"/>
-  <figcaption><a href="includes/mimeograph.iuml">Mimeograph</a></figcaption>
-</figure>
+# Gallery
+
+|   |   |
+| - | - |
+| [Mimeograph](includes/mimeograph.iuml) | <a href="examples/mimeograph.puml"><img src="generated_images/mimeograph.png" alt="" width="250"/></a> |
