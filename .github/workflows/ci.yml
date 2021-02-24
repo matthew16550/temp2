@@ -18,24 +18,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install OS Packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install default-jre-headless graphviz
+      - name: Update OS Package Lists
+        run:  sudo apt-get update
 
-          # Avoid Java logging "Created user preferences directory"
-          #mkdir -p ~/.java/.userPrefs
+      - name: Install OS Packages
+        run:  sudo apt-get install default-jre-headless graphviz
       
       - name: Install PlantUML
-        run: |
-          # Not using "apt-get install plantuml" because it's an old version
-          wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
+        # Not using "apt-get install plantuml" because it's an old version
+        run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
+
+      - name: Make output dir
+        run:  mkdir -p generated_images
 
       - name: Run PlantUML
-        run: |
-          java -Djava.awt.headless=true -jar "${GITHUB_WORKSPACE}/plantuml.jar" -help
-          mkdir -p generated_images
-          ls -l examples/*.puml
+        run:  |
           java \
             -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
             -headless \
@@ -45,8 +42,11 @@ jobs:
             examples/*.puml
           ls -l generated_images
           
-      - name: Commit Images
+      - name: Push Changes
         run: |
-          git add generated_images/*
-          git commit -m "Update Generated Images"
+          # TODO only if changes
+          git add -v generated_images/*.png
+          git commit \
+            --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" \
+            --message "Update Generated Images"
           git push
