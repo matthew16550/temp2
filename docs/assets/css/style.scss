@@ -24,3 +24,8 @@ $header-bg-color: #352879;
   background-image: none;
   padding: 0.5rem 0;
 }
+
+table td, table td * {
+  border: none;
+  vertical-align: top;
+}
