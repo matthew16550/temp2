@@ -10,8 +10,8 @@ $header-bg-color: #352879;
 // $blockquote-text-color: #819198 !default;
 
 // // Code
-// $code-bg-color: #f3f6fa !default;
-// $code-text-color: #567482 !default;
+$code-bg-color: #FFFFFF;
+$code-text-color: #000000;
 
 // // Borders
 // $border-color: #dce6f0 !default;
@@ -26,7 +26,11 @@ $header-bg-color: #352879;
 }
 
 .main-content {
-  table td, table td * {
+  pre {
+    border-radius: 0;
+  }
+
+  table td {
     border: none;
     vertical-align: top;
   }

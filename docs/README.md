@@ -2,7 +2,7 @@
 
 {% include example_image.html name="base" %}
 
-# Mimeograph
+## Mimeograph
 
 <table><tr>
   <td> {% include example_image.html name="mimeograph" %} </td>
