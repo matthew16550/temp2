@@ -4,7 +4,7 @@
 
 # Mimeograph
 
-<a href="{{site.repository_url}}/tree/main/examples/mimeograph.puml"><img src="generated/images/mimeograph.png" alt="" width="250"/></a>
+<a href="{{site.github.repository_url}}/tree/main/examples/mimeograph.puml"><img src="generated/images/mimeograph.png" alt="" width="250"/></a>
 
 
 <pre><code>{{ page | jsonify  | escape }}</code></pre>
