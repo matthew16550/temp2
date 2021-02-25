@@ -1,3 +1,4 @@
-<pre><code>
-{% include_relative generated/includes/{{include.name}}.iuml %}
+{% capture content %}{% include_relative generated/includes/{{include.name}}.iuml %}{% endcapture %}
+<pre><code class="language-plantuml">
+{{ content | strip }}
 </code></pre>
