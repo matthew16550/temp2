@@ -1,6 +1,6 @@
 @startuml
 
-!include ../includes/amiga-1.iuml
+!include ../includes/amiga.iuml
 
 actor lorem as A
 participant dolor as P1
