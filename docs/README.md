@@ -8,6 +8,8 @@
 
 ### Amiga
 
+Inspired by AmigaOS 1.x.
+
 <table><tr>
   <td> {% include example_image.html name="amiga" %} </td>
   <td> {% include plantuml_file.html file="generated/includes/amiga.iuml" %} </td>
@@ -22,12 +24,16 @@
 
 ### CRT Amber
 
+CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/1206781).
+
 <table><tr>
   <td> {% include example_image.html name="crt-amber" %} </td>
   <td> {% include plantuml_file.html file="generated/includes/crt-amber.iuml" %} </td>
 </tr></table>
 
 ### CRT Green
+
+CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/1206781).
 
 <table><tr>
   <td> {% include example_image.html name="crt-green" %} </td>

@@ -1,7 +1,5 @@
 @startuml
 
-' Inspired by AmigaOS 1.x
-
 !$BLACK  = "#000121"
 !$BLUE   = "#0B58A8"
 !$ORANGE = "#FDA325"
