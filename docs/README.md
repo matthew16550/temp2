@@ -11,4 +11,11 @@
 <pre><code>{{ site | jsonify  | escape }}</code></pre>
 <pre><code>{{ jekyll.environment | jsonify | escape }}</code></pre>
 
+{% capture foo %}
+```plantuml
+title bar
+```
+{% endcapture %}
+{{ foo | markdownify }}
+
 include_relative generated/includes/mimeograph.iuml %}</code></pre>
