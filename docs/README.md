@@ -13,7 +13,7 @@
 {% capture content %}{% include_relative generated/includes/mimeograph.iuml %}{% endcapture %}
 {% capture md %}
 ```plantuml
-{{ content | strip %}
+{{ content | strip }}
 ```
 {% endcapture %}
 {{ content | jsonify | escape }}
