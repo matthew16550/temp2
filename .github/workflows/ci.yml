@@ -9,7 +9,7 @@ on:
   
 jobs:
   generate_images:
-    name: Generate Docs
+    name: Generate doc files
     runs-on: ubuntu-latest
     env:
       IMAGES_DIR: docs/generated/images
@@ -66,5 +66,5 @@ jobs:
       - name: Push changes
         if: steps.git_add.outputs.has_changes == 1
         run: | 
-            git commit -m "Update Generated Images"
+            git commit -m "Update generated doc files"
             git push

@@ -1,4 +1,4 @@
 {% capture content %}{% include_relative {{include.file}} %}{% endcapture %}
 ```plantuml
-{{ content | remove "@startuml" |  remove "@enduml" | strip }
+{{ content | remove "@startuml" | remove "@enduml" | strip }
 ```
