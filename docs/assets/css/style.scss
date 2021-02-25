@@ -1,15 +1,16 @@
 ---
 ---
+$text-color: #212529;
 
-$blockquote-text-color: #212529;
-$body-link-color: #212529;
-$body-text-color: #212529;
+$blockquote-text-color: $text-color;
+$body-link-color: $text-color;
+$body-text-color: $text-color;
 $border-color: #CED4DA;
 $code-bg-color: #E9ECEF;
-$code-text-color: #212529;
+$code-text-color: $text-color;
 $header-bg-color: #343A40;
 $hr-border-color: #E9ECEF;
-$section-headings-color: #159957;
+$section-headings-color: #343A40;
 $table-border-color: #CED4DA;
 
 @import "{{ site.theme }}";
@@ -33,9 +34,9 @@ $table-border-color: #CED4DA;
     margin: 0;
   }
 
-  pre {
-    border-radius: 0;
-  }
+  //pre {
+  //  border-radius: 0;
+  //}
 
   table td {
     border: none;
