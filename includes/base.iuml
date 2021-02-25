@@ -1,5 +1,4 @@
 @startuml
-
 !ifndef $BG
   !$BG = "white"
 !endif
@@ -172,5 +171,4 @@ skinparam UseCaseStereoType {
     }
   </style>
 !endif
-
 @enduml

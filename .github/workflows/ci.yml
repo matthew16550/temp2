@@ -9,10 +9,11 @@ on:
   
 jobs:
   generate_images:
-    name: Generate Images
+    name: Generate Docs
     runs-on: ubuntu-latest
     env:
-      OUTPUT_DIR: docs/generated_images
+      IMAGES_DIR: docs/generated/images
+      INCLUDES_DIR: docs/generated/includes
       PLANTUML_VERSION: 1.2021.1
     steps:
       - name: Checkout
@@ -23,11 +24,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
 
-      - name: Setup Java
+      - name: Set up Java
         uses: actions/setup-java@v1.4.3
         with:
           java-version: 15
-    
+
       - name: Update OS package lists
         run:  sudo apt-get update
 
@@ -38,23 +39,29 @@ jobs:
       - name: Install PlantUML
         run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
-      - name: Make output dir
-        run:  mkdir -p "${OUTPUT_DIR}"
+      - name: Make output dirs
+        run: mkdir -p "${IMAGES_DIR}" "${INCLUDES_DIR}"
 
-      - name: Run PlantUML
+      - name: Generate includes
+        run: |
+          for path in includes/*.iuml; do
+            sed '/@startuml/d;/@enduml/d' "${path}" > "docs/generated/${path}"
+          done
+
+      - name: Generate images
         run:  |
           java \
             -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
             -headless \
             -nometadata \
-            -o "${GITHUB_WORKSPACE}/${OUTPUT_DIR}" \
+            -o "${GITHUB_WORKSPACE}/${IMAGES_DIR}" \
             -verbose \
             "examples/**.puml"
         
       - name: Git add new / changed files
         id: git_add
         run: |
-          git add -v "${OUTPUT_DIR}/*.png"
+          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*.iuml"
           set +e
           git diff-index --cached HEAD --quiet
           echo "::set-output name=has_changes::$?"
