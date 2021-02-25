@@ -5,7 +5,7 @@
 # Mimeograph
 
 <a href="../examples/mimeograph.puml"><img src="generated/images/mimeograph.png" alt="" width="250"/></a>
-<pre><code>{{ page }}</code></pre>
-<pre><code>{{ site }}</code></pre>
+<pre><code>{{ page | jsonify }}</code></pre>
+<pre><code>{{ site | jsonify }}</code></pre>
 
 include_relative generated/includes/mimeograph.iuml %}</code></pre>
