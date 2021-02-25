@@ -1,3 +1,7 @@
+<pre><code>
+{{ site | jsonify | escape }}
+</code></pre>
+
 # Base Theme
 
 {% include example_image.html name="base" %}
@@ -8,9 +12,3 @@
   <td> {% include example_image.html name="mimeograph" %} </td>
   <td> {% include plantuml_file.html file="generated/includes/mimeograph.iuml" %} </td>
 </tr></table>
-
-![](generated/images/base.png)
-
-<pre><code>
-{{ site | jsonify | escape }}
-</code></pre>
