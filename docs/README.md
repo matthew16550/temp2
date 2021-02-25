@@ -1,24 +1,20 @@
 # Base Theme
 
-<img src="generated/images/base.png" alt="TODO" width="250"/>
+{% include example_image.html name="base" %}
 
 # Mimeograph
 
-{% include example_image.html name="base" %}
 {% include example_image.html name="mimeograph" %}
-
-<a href="{{site.github.repository_url}}/tree/main/examples/mimeograph.puml"><img src="generated/images/mimeograph.png" alt="" width="250"/></a>
-
 
 <pre><code>{{ page | jsonify  | escape }}</code></pre>
 <pre><code>{{ site | jsonify  | escape }}</code></pre>
 <pre><code>{{ jekyll.environment | jsonify | escape }}</code></pre>
 
-{% capture foo %}
+{% capture md %}
 ```plantuml
-title bar
+{% include_relative generated/includes/mimeograph.iuml %}
 ```
 {% endcapture %}
-{{ foo | markdownify }}
+{{ md | markdownify }}
 
-include_relative generated/includes/mimeograph.iuml %}</code></pre>
+</code></pre>
