@@ -4,4 +4,9 @@
 
 # Mimeograph
 
-{% include example_image.html name="mimeograph" %}{% include_relative generated/includes/mimeograph.md %}
+{% include example_image.html name="mimeograph" %}
+{% include example_include.html name="mimeograph" %}
+
+```plantuml
+title foo
+```

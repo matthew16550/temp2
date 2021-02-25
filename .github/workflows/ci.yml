@@ -46,7 +46,7 @@ jobs:
         run: |
           for path in includes/*.iuml; do
             echo "${path}"
-            sed 's/^@startuml/```plantuml/1; s/^@enduml/```/1' "${path}" > "docs/generated/${path%.*}.md"
+            sed '/^@startuml/d; /^@enduml/d' "${path}" > "docs/generated/${path}"
           done
 
       - name: Generate images
@@ -62,7 +62,7 @@ jobs:
       - name: Git add new / changed files
         id: git_add
         run: |
-          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*.md"
+          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*"
           set +e
           git diff-index --cached HEAD --quiet
           echo "::set-output name=has_changes::$?"
