@@ -25,7 +25,9 @@ $header-bg-color: #352879;
   padding: 0.5rem 0;
 }
 
-table td, table td * {
-  border: none;
-  vertical-align: top;
+.main-content {
+  table td, table td * {
+    border: none;
+    vertical-align: top;
+  }
 }
