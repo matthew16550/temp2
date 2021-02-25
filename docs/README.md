@@ -8,5 +8,5 @@
 
 {% capture content %}{% include_relative generated/includes/mimeograph.iuml %}{% endcapture %}
 ```plantuml
-{{ content | remove "@startuml" | remove "@enduml" | strip }}
+{{ content | remove: "@startuml" | remove: "@enduml" | strip }}
 ```
