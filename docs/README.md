@@ -8,7 +8,7 @@
 
 ### Amiga
 
-Inspired by AmigaOS 1.x.
+Inspired by [AmigaOS 1.x](https://en.wikipedia.org/wiki/AmigaOS#AmigaOS_1.0_%E2%80%93_1.4).
 
 <table><tr>
   <td> {% include example_image.html name="amiga" %} </td>
