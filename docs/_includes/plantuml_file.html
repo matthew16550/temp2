@@ -1,7 +1,7 @@
 {% capture content %}{% include_relative {{include.file}} %}{% endcapture %}
 {% capture md %}
 ```plantuml
-{{ content | remove: "@startuml" | remove: "@enduml" | strip }}
+{{ content | remove: "@startuml" | remove: "@enduml" | replace: "!include base.iuml", "!include TODO/base.iuml" | strip }}
 ```
 {% endcapture %}
 {{ md | markdownify }}
