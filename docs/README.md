@@ -4,6 +4,7 @@
 
 # Mimeograph
 
-| | |
-|-|-|
-| {% include example_image.html name="mimeograph" %} | {% include plantuml_file.html file="generated/includes/mimeograph.iuml" %} |
+<table><tr>
+  <td> {% include example_image.html name="mimeograph" %} </td>
+  <td> {% include plantuml_file.html file="generated/includes/mimeograph.iuml" %} </td>
+</tr></table>
