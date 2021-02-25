@@ -1,8 +1,5 @@
 @startuml
 
-' CRT monitor colors from
-' https://superuser.com/a/1206781
-
 !$BG                   = "#282828"
 !$FG                   = "#33FF33"
 !$HYPERLINK_COLOR      = $FG
