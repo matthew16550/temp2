@@ -62,7 +62,7 @@ jobs:
       - name: Git add new / changed files
         id: git_add
         run: |
-          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*.iuml"
+          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*.md"
           set +e
           git diff-index --cached HEAD --quiet
           echo "::set-output name=has_changes::$?"
