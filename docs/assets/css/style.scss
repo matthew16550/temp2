@@ -1,7 +1,7 @@
 ---
 ---
 
-$header-bg-color: #352879;
+//$header-bg-color: #352879;
 
 // Text
 // $section-headings-color: #159957 !default;
@@ -10,8 +10,8 @@ $header-bg-color: #352879;
 // $blockquote-text-color: #819198 !default;
 
 // // Code
-$code-bg-color: #FFFFFF;
-$code-text-color: #000000;
+//$code-bg-color: #FFFFFF;
+//$code-text-color: #000000;
 
 // // Borders
 // $border-color: #dce6f0 !default;
@@ -20,18 +20,27 @@ $code-text-color: #000000;
 
 @import "{{ site.theme }}";
 
-.page-header {
-  background-image: none;
-  padding: 0.5rem 0;
-}
-
-.main-content {
-  pre {
-    border-radius: 0;
-  }
-
-  table td {
-    border: none;
-    vertical-align: top;
-  }
-}
+//.page-header {
+//  background-image: none;
+//  padding: 0.5rem 0;
+//}
+//
+//.main-content {
+//  figcaption {
+//    font-size: 0.8rem;
+//    text-align: right;
+//  }
+//
+//  figure {
+//    margin: 0;
+//  }
+//
+//  pre {
+//    border-radius: 0;
+//  }
+//
+//  table td {
+//    border: none;
+//    vertical-align: top;
+//  }
+//}

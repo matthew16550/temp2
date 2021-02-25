@@ -1,7 +1,11 @@
 {% capture content %}{% include_relative {{include.file}} %}{% endcapture %}
 {% capture md %}
 ```plantuml
-{{ content | remove: "@startuml" | remove: "@enduml" | replace: "!include base.iuml", "!include TODO/base.iuml" | strip }}
+{{ content
+   | remove: "@startuml"
+   | remove: "@enduml"
+   | replace: "!include base.iuml", "!include https://raw.githubusercontent.com/{{site.github.repository_nwo}}/main/includes/base.iuml"
+   | strip }}
 ```
 {% endcapture %}
 {{ md | markdownify }}
