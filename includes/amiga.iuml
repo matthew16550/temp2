@@ -1,0 +1,18 @@
+@startuml
+
+' Inspired by AmigaOS 1.x
+
+!$BLACK  = "#000121"
+!$BLUE   = "#0B58A8"
+!$ORANGE = "#FDA325"
+!$RED    = "#DB252B"
+!$WHITE  = "#FFFFFF"
+
+!$BG                   = $BLUE
+!$FG                   = $WHITE
+!$HYPERLINK_COLOR      = $ORANGE
+!$INVERT_FRAME_HEADERS = "true"
+
+!include base.iuml
+
+@enduml

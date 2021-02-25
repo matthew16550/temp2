@@ -1,0 +1,9 @@
+@startuml
+
+!$BG              = "#003153"
+!$FG              = "#D9D3D0"
+!$HYPERLINK_COLOR = $FG
+
+!include base.iuml
+
+@enduml
