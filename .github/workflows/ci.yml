@@ -45,7 +45,8 @@ jobs:
       - name: Generate includes
         run: |
           for path in includes/*.iuml; do
-            sed '/@startuml/d;/@enduml/d' "${path}" > "docs/generated/${path}"
+            echo "${path}"
+            sed 's/^@startuml/```plantuml/1; s/^@enduml/```/1' "${path}" > "docs/generated/${path%.*}.md"
           done
 
       - name: Generate images

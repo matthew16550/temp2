@@ -1,4 +1,3 @@
 TODO
-{{ github | jsonify | escape }}
-{{ site | jsonify | escape }}
-{{  site.url }}
+See [https://matthew16550.github.io/temp2/]
+

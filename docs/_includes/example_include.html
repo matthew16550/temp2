@@ -1,7 +1,2 @@
-{% capture content %}{% include_relative generated/includes/{{include.name}}.iuml %}{% endcapture %}
-{% capture md %}
-```plantuml
-{{ content | strip }}
-```
-{% endcapture %}
-{{ md | markdownify }}
+{% capture content %}{% include_relative generated/includes/{{include.name}}.md %}{% endcapture %}
+{{ content | markdownify }}
