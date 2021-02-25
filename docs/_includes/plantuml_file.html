@@ -1,4 +1,7 @@
 {% capture content %}{% include_relative {{include.file}} %}{% endcapture %}
+{% capture md %}
 ```plantuml
 {{ content | remove: "@startuml" | remove: "@enduml" | strip }}
 ```
+{% endcapture %}
+{{ md | markdownify }}
