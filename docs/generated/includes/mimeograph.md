@@ -1,0 +1,7 @@
+```plantuml
+!$BG              = "#D9D3D0"
+!$FG              = "#9275B6"
+!$HYPERLINK_COLOR = $FG
+
+!include base.iuml
+```
