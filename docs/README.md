@@ -5,6 +5,9 @@
 # Base Theme
 
 {% include example_image.html name="base" %}
+```
+!include https://raw.githubusercontent.com/matthew16550/temp2/main/includes/base.iuml
+```
 
 ## Mimeograph
 

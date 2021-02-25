@@ -1,22 +1,16 @@
 ---
 ---
 
-$header-bg-color: #352879;
-
-// Text
-// $section-headings-color: #159957 !default;
-$body-text-color: #727272;
-$body-link-color: #267CB9;
-// $blockquote-text-color: #819198 !default;
-
-// // Code
-$code-bg-color: #F8F8F8;
-$code-text-color: #303030;
-
-// // Borders
-// $border-color: #dce6f0 !default;
-// $table-border-color: #e9ebec !default;
-// $hr-border-color: #eff0f1 !default;
+$blockquote-text-color: #212529;
+$body-link-color: #212529;
+$body-text-color: #212529;
+$border-color: #CED4DA;
+$code-bg-color: #E9ECEF;
+$code-text-color: #212529;
+$header-bg-color: #343A40;
+$hr-border-color: #E9ECEF;
+$section-headings-color: #159957;
+$table-border-color: #CED4DA;
 
 @import "{{ site.theme }}";
 
@@ -26,6 +20,10 @@ $code-text-color: #303030;
 }
 
 .main-content {
+  a {
+    text-decoration: underline;
+  }
+
   figcaption {
     font-size: 0.8rem;
     text-align: right;
