@@ -42,12 +42,8 @@ jobs:
       - name: Make output dirs
         run: mkdir -p "${IMAGES_DIR}" "${INCLUDES_DIR}"
 
-      - name: Generate includes
-        run: |
-          for path in includes/*.iuml; do
-            echo "${path}"
-            sed '/^@startuml/d; /^@enduml/d' "${path}" > "docs/generated/${path}"
-          done
+      - name: Copy includes
+        run: cp -v includes/*.iuml "${INCLUDES_DIR}/"
 
       - name: Generate images
         run:  |
