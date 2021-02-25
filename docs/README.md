@@ -4,6 +4,9 @@
 
 # Mimeograph
 
+{% include example_image.html name="base" %}
+{% include example_image.html name="mimeograph" %}
+
 <a href="{{site.github.repository_url}}/tree/main/examples/mimeograph.puml"><img src="generated/images/mimeograph.png" alt="" width="250"/></a>
 
 
