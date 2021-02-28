@@ -6,7 +6,7 @@
 !include https://raw.githubusercontent.com/matthew16550/temp2/main/includes/base.iuml
 ```
 
-### Amiga
+## Amiga
 
 Inspired by [AmigaOS 1.x](https://en.wikipedia.org/wiki/AmigaOS#AmigaOS_1.0_%E2%80%93_1.4).
 
@@ -15,14 +15,14 @@ Inspired by [AmigaOS 1.x](https://en.wikipedia.org/wiki/AmigaOS#AmigaOS_1.0_%E2%
   <td> {% include plantuml_file.html file="generated/includes/amiga.iuml" %} </td>
 </tr></table>
 
-### Blueprint
+## Blueprint
 
 <table><tr>
   <td> {% include example_image.html name="blueprint" %} </td>
   <td> {% include plantuml_file.html file="generated/includes/blueprint.iuml" %} </td>
 </tr></table>
 
-### CRT Amber
+## CRT
 
 CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/1206781).
 
@@ -31,16 +31,12 @@ CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/120678
   <td> {% include plantuml_file.html file="generated/includes/crt-amber.iuml" %} </td>
 </tr></table>
 
-### CRT Green
-
-CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/1206781).
-
 <table><tr>
   <td> {% include example_image.html name="crt-green" %} </td>
   <td> {% include plantuml_file.html file="generated/includes/crt-green.iuml" %} </td>
 </tr></table>
 
-### Mimeograph
+## Mimeograph
 
 <table><tr>
   <td> {% include example_image.html name="mimeograph" %} </td>
