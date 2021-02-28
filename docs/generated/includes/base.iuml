@@ -1,4 +1,5 @@
 @startuml
+'TODO get rid of startuml ??
 !ifndef $BG
   !$BG = "white"
 !endif
@@ -27,6 +28,7 @@
     HyperLinkColor $HYPERLINK_COLOR
     LineColor $FG
     LineThickness 1
+    Margin 5
   }
   caption {
     LineThickness 0
