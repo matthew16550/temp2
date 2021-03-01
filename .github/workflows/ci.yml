@@ -49,7 +49,7 @@ jobs:
             -nometadata \
             -o "${GITHUB_WORKSPACE}/${EXAMPLE_IMAGES_DIR}" \
             -verbose \
-            "examples/**.puml"
+            "examples/*.puml"
 
       - name: Git add
         id: git_add

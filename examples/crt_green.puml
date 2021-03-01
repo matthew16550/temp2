@@ -1,44 +1,6 @@
 @startuml
 
 !include ../themes/parakeet_crt_green.iuml
-
-actor lorem as A
-participant dolor as P1
-queue sit as Q
-box ipsum
-  participant consectetur as P2 <<amet>>
-  database adipiscing as DB
-end box
-
-A -> P1++ : elit
-
-P1 -> Q : sed do\n\
-eiusmod\n\
-tempor
-
-P1 -> P1 : incididunt
-
-return
-
-Q -> P2++ : <back:$BG>ut labore
-
-P2 -\ DB ++ : et dolore
-
-P2 --
-
-destroy DB
-
-note over A, Q
-  <b>Ut</b> <u>enim ad</u> <i>minim</i>
-  ""veniam"", [[example.org quis nostrud]]
-  <w>exercitation</w> <s>ullamco</s>
-end note
-
-== magna aliqua ==
-
-group laboris
-  -> P2++ : <back:$BG>aliquip ex
-  return <back:$BG>ea commodo
-end
+!include common/sequence.puml
 
 @enduml

@@ -2,9 +2,9 @@ Some themes for [PlantUML](https://plantuml.com/).
 
 # Amiga
 
-{% include example_image.html name="amiga" %}
-
 Inspired by [AmigaOS 1.x](https://en.wikipedia.org/wiki/AmigaOS#AmigaOS_1.0_%E2%80%93_1.4).
+
+{% include example_image.html name="amiga" %}
 
 ```
 !include {{site.raw_content_url}}/themes/parakeet_amiga.iuml
