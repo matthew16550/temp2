@@ -1,32 +1,24 @@
 ---
 ---
-$text-color: #212529;
 
-$blockquote-text-color: $text-color;
-$body-link-color: $text-color;
-$body-text-color: $text-color;
-$border-color: #CED4DA;
-$code-bg-color: #E9ECEF;
-$code-text-color: $text-color;
-$header-bg-color: #343A40;
-$hr-border-color: #E9ECEF;
-$section-headings-color: #343A40;
-$table-border-color: #CED4DA;
+//$text-color: #212529;
+//
+//$blockquote-text-color: $text-color;
+//$body-link-color: $text-color;
+//$body-text-color: $text-color;
+//$border-color: #CED4DA;
+//$code-bg-color: #E9ECEF;
+//$code-text-color: $text-color;
+//$hr-border-color: #E9ECEF;
+//$section-headings-color: #343A40;
+//$table-border-color: #CED4DA;
+
+$header-bg-color: #212529;
+$header-bg-color-secondary: #343A40;
 
 @import "{{ site.theme }}";
 
 .page-header {
-  background-image: none;
   padding: 0.5rem 0;
 }
 
-.main-content {
-  a {
-    text-decoration: underline;
-  }
-
-  //table td {
-  //  border: none;
-  //  vertical-align: top;
-  //}
-}
