@@ -1,6 +1,6 @@
 @startuml
 
-!include parakeet_blueprint.iuml
+!include ../themes/parakeet_blueprint.iuml
 
 actor lorem as A
 participant dolor as P1

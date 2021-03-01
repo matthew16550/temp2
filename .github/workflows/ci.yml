@@ -46,7 +46,6 @@ jobs:
           java \
             -jar plantuml.jar \
             -headless \
-            -Ithemes \
             -nometadata \
             -o "${EXAMPLE_IMAGES_DIR}" \
             -verbose \

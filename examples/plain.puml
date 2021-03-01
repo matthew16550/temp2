@@ -1,6 +1,6 @@
 @startuml
 
-!include parakeet_plain.iuml
+!include ../themes/parakeet_plain.iuml
 
 title foo
 
