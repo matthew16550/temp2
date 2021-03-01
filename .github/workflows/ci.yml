@@ -4,21 +4,20 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'docs/generated_images/**'
+      - 'docs/example_images/**'
   workflow_dispatch:
-  
+
 jobs:
   generate_images:
     name: Generate doc files
     runs-on: ubuntu-latest
     env:
-      IMAGES_DIR: docs/generated/images
-      INCLUDES_DIR: docs/generated/includes
+      EXAMPLE_IMAGES_DIR: docs/example_images
       PLANTUML_VERSION: 1.2021.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: Configure Git
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -37,34 +36,32 @@ jobs:
 
       # Not using OS package here because it's always an old version
       - name: Install PlantUML
-        run:  wget -q -O "${GITHUB_WORKSPACE}/plantuml.jar" "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
+        run:  wget -q -O plantuml.jar "https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${PLANTUML_VERSION}/plantuml-${PLANTUML_VERSION}.jar"
 
-      - name: Make output dirs
-        run: mkdir -p "${IMAGES_DIR}" "${INCLUDES_DIR}"
-
-      - name: Copy includes
-        run: cp -v includes/*.iuml "${INCLUDES_DIR}/"
+      - name: Make output dir
+        run: mkdir -p "${EXAMPLE_IMAGES_DIR}"
 
       - name: Generate images
         run:  |
           java \
-            -jar "${GITHUB_WORKSPACE}/plantuml.jar" \
+            -jar plantuml.jar \
             -headless \
+            -Ithemes \
             -nometadata \
-            -o "${GITHUB_WORKSPACE}/${IMAGES_DIR}" \
+            -o "${EXAMPLE_IMAGES_DIR}" \
             -verbose \
             "examples/**.puml"
-        
-      - name: Git add new / changed files
+
+      - name: Git add new or changed images
         id: git_add
         run: |
-          git add -v "${IMAGES_DIR}/*.png" "${INCLUDES_DIR}/*"
+          git add -v "${EXAMPLE_IMAGES_DIR}/*.png"
           set +e
           git diff-index --cached HEAD --quiet
           echo "::set-output name=has_changes::$?"
 
       - name: Push changes
         if: steps.git_add.outputs.has_changes == 1
-        run: | 
+        run: |
             git commit -m "Update generated doc files"
             git push

@@ -1,44 +1,51 @@
-# Base Theme
+Some themes for [PlantUML](https://plantuml.com/).
 
-{% include example_image.html name="base" %}
+# Amiga
 
-```
-!include https://raw.githubusercontent.com/matthew16550/temp2/main/includes/base.iuml
-```
-
-## Amiga
+{% include example_image.html name="amiga" %}
 
 Inspired by [AmigaOS 1.x](https://en.wikipedia.org/wiki/AmigaOS#AmigaOS_1.0_%E2%80%93_1.4).
 
-<table><tr>
-  <td> {% include example_image.html name="amiga" %} </td>
-  <td> {% include plantuml_file.html file="generated/includes/amiga.iuml" %} </td>
-</tr></table>
+```
+!include {{site.raw_content_url}}/themes/parakeet_amiga.iuml
+```
 
-## Blueprint
+# Blueprint
 
-<table><tr>
-  <td> {% include example_image.html name="blueprint" %} </td>
-  <td> {% include plantuml_file.html file="generated/includes/blueprint.iuml" %} </td>
-</tr></table>
+{% include example_image.html name="blueprint" %}
 
-## CRT
+```
+!include {{site.raw_content_url}}/themes/parakeet_blueprint.iuml
+```
 
-CRT monitor colors from [superuser.com/a/1206781](https://superuser.com/a/1206781).
+# CRT Amber
 
-<table><tr>
-  <td> {% include example_image.html name="crt-amber" %} </td>
-  <td> {% include plantuml_file.html file="generated/includes/crt-amber.iuml" %} </td>
-</tr></table>
+{% include example_image.html name="crt_amber" %}
 
-<table><tr>
-  <td> {% include example_image.html name="crt-green" %} </td>
-  <td> {% include plantuml_file.html file="generated/includes/crt-green.iuml" %} </td>
-</tr></table>
+```
+!include {{site.raw_content_url}}/themes/parakeet_crt_amber.iuml
+```
 
-## Mimeograph
+# CRT Green
 
-<table><tr>
-  <td> {% include example_image.html name="mimeograph" %} </td>
-  <td> {% include plantuml_file.html file="generated/includes/mimeograph.iuml" %} </td>
-</tr></table>
+{% include example_image.html name="crt_green" %}
+
+```
+!include {{site.raw_content_url}}/themes/parakeet_crt_green.iuml
+```
+
+# Mimeograph
+
+{% include example_image.html name="mimeograph" %}
+
+```
+!include {{site.raw_content_url}}/themes/parakeet_mimeograph.iuml
+```
+
+# Plain
+
+{% include example_image.html name="plain" %}
+
+```
+!include {{site.raw_content_url}}/themes/parakeet_plain.iuml
+```

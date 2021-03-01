@@ -1,0 +1,168 @@
+' CRT monitor colors from https://superuser.com/a/1206781
+
+!$DARK_AMBER  = "#FFB000"
+!$LIGHT_AMBER = "#FFCC00"
+
+!$BG = "#282828"
+!$FG = $DARK_AMBER
+
+!ifndef $FONT_NAME
+  !$FONT_NAME = "Verdana"
+!endif
+
+!ifndef $FONT_NAME_MONOSPACED
+  !$FONT_NAME_MONOSPACED = "Courier"
+!endif
+
+<style>
+  root {
+    BackgroundColor $BG
+    FontColor $FG
+    FontName $FONT_NAME
+    HyperLinkColor $LIGHT_AMBER
+    LineColor $FG
+    LineThickness 1
+    Margin 5
+  }
+  box {
+    LineStyle 12-18
+    LineThickness 3
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  groupHeader {
+    BackgroundColor $FG
+    FontColor $BG
+    FontStyle bold
+  }
+  header {
+    LineThickness 0
+  }
+  node {
+    MaximumWidth 300
+  }
+  referenceHeader {
+    BackgroundColor $FG
+    FontColor $BG
+    FontStyle bold
+  }
+  separator {
+    BackgroundColor $FG
+    FontColor $BG
+    FontStyle bold
+  }
+  title {
+    LineThickness 0
+  }
+</style>
+
+skinparam ArrowLollipopColor $FG
+skinparam BackgroundColor $BG
+skinparam DefaultFontName $FONT_NAME
+skinparam DefaultMonospacedFontName $FONT_NAME_MONOSPACED
+skinparam Footbox hide
+skinparam LifelineStrategy solid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor $FG
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor $BG
+  BarColor $FG
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Boundary {
+  FontColor $FG
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor $BG
+  FontName $FONT_NAME_MONOSPACED
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor $BG
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam ClassAttribute {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam ClassStereotype {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Footer {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Header {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Hyperlink {
+  Color $LIGHT_AMBER
+}
+skinparam IconPackage {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconPrivate {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconProtected {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconPublic {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam Note {
+  FontName $FONT_NAME
+}
+skinparam Package {
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam State {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeA {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeC {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeE {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeI {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeN {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam UseCaseStereoType {
+  FontColor $FG
+  FontName $FONT_NAME
+}

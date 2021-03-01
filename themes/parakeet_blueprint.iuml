@@ -1,8 +1,5 @@
-@startuml
-'TODO get rid of startuml ??
-!ifndef $BG
-  !$BG = "white"
-!endif
+!$BG = "#003153"
+!$FG = "#D9D3D0"
 
 !ifndef $FONT_NAME
   !$FONT_NAME = "Verdana"
@@ -12,20 +9,12 @@
   !$FONT_NAME_MONOSPACED = "Courier"
 !endif
 
-!ifndef $FG
-  !$FG = "black"
-!endif
-
-!ifndef $HYPERLINK_COLOR
-  !$HYPERLINK_COLOR = "blue"
-!endif
-
 <style>
   root {
     BackgroundColor $BG
     FontColor $FG
     FontName $FONT_NAME
-    HyperLinkColor $HYPERLINK_COLOR
+    HyperLinkColor $FG
     LineColor $FG
     LineThickness 1
     Margin 5
@@ -99,7 +88,7 @@ skinparam Header {
   FontName $FONT_NAME
 }
 skinparam Hyperlink {
-  Color $HYPERLINK_COLOR
+  Color $FG
 }
 skinparam IconPackage {
   Color $FG
@@ -153,24 +142,3 @@ skinparam UseCaseStereoType {
   FontColor $FG
   FontName $FONT_NAME
 }
-
-!if $INVERT_FRAME_HEADERS == "true"
-  <style>
-    groupHeader {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-    referenceHeader {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-    separator {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-  </style>
-!endif
-@enduml

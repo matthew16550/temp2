@@ -1,6 +1,6 @@
 @startuml
 
-!include ../includes/crt-amber.iuml
+!include parakeet_crt_amber.iuml
 
 actor lorem as A
 participant dolor as P1

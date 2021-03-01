@@ -1,6 +1,6 @@
 @startuml
 
-!include ../includes/amiga.iuml
+!include parakeet_amiga.iuml
 
 actor lorem as A
 participant dolor as P1

@@ -1,0 +1,144 @@
+!$BG = "#D9D3D0"
+!$FG = "#9275B6"
+
+!ifndef $FONT_NAME
+  !$FONT_NAME = "Verdana"
+!endif
+
+!ifndef $FONT_NAME_MONOSPACED
+  !$FONT_NAME_MONOSPACED = "Courier"
+!endif
+
+<style>
+  root {
+    BackgroundColor $BG
+    FontColor $FG
+    FontName $FONT_NAME
+    HyperLinkColor $FG
+    LineColor $FG
+    LineThickness 1
+    Margin 5
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  header {
+    LineThickness 0
+  }
+  node {
+    MaximumWidth 300
+  }
+  title {
+    LineThickness 0
+  }
+</style>
+
+skinparam ArrowLollipopColor $FG
+skinparam BackgroundColor $BG
+skinparam DefaultFontName $FONT_NAME
+skinparam DefaultMonospacedFontName $FONT_NAME_MONOSPACED
+skinparam Footbox hide
+skinparam LifelineStrategy nosolid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor $FG
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor $BG
+  BarColor $FG
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Boundary {
+  FontColor $FG
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor $BG
+  FontName $FONT_NAME_MONOSPACED
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor $BG
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam ClassAttribute {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam ClassStereotype {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Footer {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Header {
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam Hyperlink {
+  Color $FG
+}
+skinparam IconPackage {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconPrivate {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconProtected {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam IconPublic {
+  Color $FG
+  BackgroundColor $BG
+}
+skinparam Note {
+  FontName $FONT_NAME
+}
+skinparam Package {
+  BorderColor $FG
+  FontColor $FG
+  FontName $FONT_NAME
+}
+skinparam State {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeA {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeC {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeE {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeI {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam StereotypeN {
+  BackgroundColor $BG
+  BorderColor $FG
+}
+skinparam UseCaseStereoType {
+  FontColor $FG
+  FontName $FONT_NAME
+}
