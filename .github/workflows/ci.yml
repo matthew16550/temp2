@@ -51,9 +51,10 @@ jobs:
             -verbose \
             "examples/**.puml"
 
-      - name: Git add new or changed images
+      - name: Git add
         id: git_add
         run: |
+          ls -la "${EXAMPLE_IMAGES_DIR}"
           git add -v "${EXAMPLE_IMAGES_DIR}/*.png"
           set +e
           git diff-index --cached HEAD --quiet
