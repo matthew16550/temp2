@@ -1,20 +1,29 @@
 ---
 ---
 
-//$text-color: #212529;
-//
-//$blockquote-text-color: $text-color;
-//$body-link-color: $text-color;
-//$body-text-color: $text-color;
-//$border-color: #CED4DA;
-//$code-bg-color: #E9ECEF;
-//$code-text-color: $text-color;
-//$hr-border-color: #E9ECEF;
-//$section-headings-color: #343A40;
-//$table-border-color: #CED4DA;
+' Palette from https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+$cultured: #f8f9faff;
+$cultured-2: #e9ecefff;
+$gainsboro: #dee2e6ff;
+$light-gray: #ced4daff;
+$cadet-blue-crayola: #adb5bdff;
+$slate-gray: #6c757dff;
+$davys-grey: #495057ff;
+$gunmetal: #343a40ff;
+$charleston-green: #212529ff;
 
-$header-bg-color: #212529;
-$header-bg-color-secondary: #343A40;
+$blockquote-text-color: $slate-gray;
+$body-link-color: #1e6bb8;
+$body-text-color: $gunmetal;
+$border-color: $cultured-2;
+$code-bg-color: $cultured;
+$code-text-color: $slate-gray;
+$header-bg-color-secondary: $gunmetal;
+$header-bg-color: $charleston-green;
+$header-heading-color: $cultured;
+$hr-border-color: $border-color;
+$section-headings-color: $charleston-green;
+$table-border-color: $border-color;
 
 @import "{{ site.theme }}";
 
@@ -24,4 +33,8 @@ $header-bg-color-secondary: #343A40;
   .btn {
     padding: 0.3rem 0.5rem;
   }
+}
+
+.project-tagline, .site-footer {
+  display: none;
 }
