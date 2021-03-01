@@ -47,7 +47,7 @@ jobs:
             -jar plantuml.jar \
             -headless \
             -nometadata \
-            -o "${EXAMPLE_IMAGES_DIR}" \
+            -o "${GITHUB_WORKSPACE}/${EXAMPLE_IMAGES_DIR}" \
             -verbose \
             "examples/**.puml"
 
