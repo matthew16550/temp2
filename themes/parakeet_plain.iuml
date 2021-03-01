@@ -54,6 +54,7 @@
     MaximumWidth 300
   }
   title {
+    FontSize 22
     LineThickness 0
   }
 </style>
@@ -83,7 +84,7 @@ skinparam Box {
   Padding 5
 }
 skinparam CircledCharacter {
-  FontColor $BG
+  FontColor $FG
   FontName $FONT_NAME_MONOSPACED
   Radius 9
 }
@@ -129,6 +130,7 @@ skinparam IconPublic {
   BackgroundColor $BG
 }
 skinparam Note {
+  FontColor $FG
   FontName $FONT_NAME
 }
 skinparam Package {
@@ -164,23 +166,3 @@ skinparam UseCaseStereoType {
   FontColor $FG
   FontName $FONT_NAME
 }
-
-!if $INVERT_FRAME_HEADERS == "true"
-  <style>
-    groupHeader {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-    referenceHeader {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-    separator {
-      BackgroundColor $FG
-      FontColor $BG
-      FontStyle bold
-    }
-  </style>
-!endif
