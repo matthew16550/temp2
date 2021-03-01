@@ -35,12 +35,14 @@ $table-border-color: $border-color;
   }
 }
 
+.project-name {
+  margin-bottom: 1rem;
+}
+
 .project-tagline, .site-footer {
   display: none;
 }
 
-.main-content {
-  .highlight pre {
-    padding: 0.3rem;
-  }
+.main-content .highlight pre {
+  padding: 0.3rem;
 }
