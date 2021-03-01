@@ -1,0 +1,87 @@
+@startuml
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+actor "actor" <<stereo type>>
+boundary "boundary"
+collections collections
+control control
+database database
+entity entity
+
+box box
+  participant participant
+  queue queue
+end box
+
+autonumber
+
+actor -> collections++ : arrow
+
+collections -> collections
+
+return return
+
+... delay ...
+
+actor -> collections++ : ""monospaced arrow aeiou""
+
+destroy collections
+
+autonumber stop
+
+== separator ==
+
+note over actor, boundary
+note
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+__ underscores __
+[[http://example.com {tooltip} hyperlink]]
+end note
+
+alt
+  actor -> boundary
+else
+  actor <- boundary
+end
+
+break
+  actor -> boundary
+end
+
+critical
+  actor -> boundary
+end
+
+group
+  actor -> boundary
+end
+
+loop
+  actor -> boundary
+end
+
+opt
+  actor -> boundary
+end
+
+par
+  actor -> boundary
+end
+
+ref over actor, boundary :
+
+@enduml

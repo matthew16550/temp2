@@ -1,0 +1,117 @@
+@startuml
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+class class1 <generic> <<stereotype>> {
+  field
+  {static} static_field
+  -private_field
+  ~package_private_field
+  #protected_field
+  +public_field
+  -- dashes --
+  == equals ==
+  .. dots ..
+  __ underscores __
+  method()
+  {abstract} abstract_method()
+  -private_method()
+  ~package_private_method()
+  #protected_method()
+  +public_method()
+}
+
+class1 -() lollipop
+
+class foo {
+  abcdefghijklmnopqrstuvwxyz
+}
+
+class bar {
+  abcdefghijklmnopqrstuvwxyz
+}
+
+foo "1" -- "many" bar : > label
+foo +--o bar
+foo ---x bar
+foo )--o| bar
+foo *--|| bar
+foo <--{ bar
+foo <|--o{ bar
+foo <|:--|{ bar
+foo <||--^ bar
+foo .. bar
+
+note as N1
+note1
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+__ underscores __
+[[http://example.com {tooltip} hyperlink]]
+end note
+N1 .. class1
+
+note as N2
+note2
+end note
+N2 .. package_card
+N2 -- package_cloud
+
+namespace namespace {
+  abstract        abstract
+  abstract class  "abstract class"
+  annotation      annotation
+  circle          circle
+  ()              circle_short_form
+  diamond         diamond
+  <>              diamond_short_form
+  entity          entity
+  enum            enum
+  interface       interface
+}
+
+package package {
+  class foo_package
+}
+
+package package_card <<Card>> {
+  class foo_card
+}
+
+package package_cloud <<Cloud>> {
+  class foo_cloud
+}
+
+package package_database <<Database>> {
+  class foo_database
+}
+
+package package_folder <<Folder>> {
+  class foo_folder
+}
+
+package package_frame <<Frame>> {
+  class foo_frame
+}
+
+package package_node <<Node>> {
+  class foo_node
+}
+
+package package_rectangle <<Rectangle>> {
+  class foo_rectangle
+}
+
+@enduml

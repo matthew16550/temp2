@@ -1,0 +1,105 @@
+@startuml
+
+' "Deployment" & "Component" & "Archimate" diagrams are actually this
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+left to right direction
+
+'skinparam componentStyle rectangle
+'skinparam componentStyle uml1
+'skinparam componentStyle uml2
+
+frame component_shapes {
+  actor actor
+  actor/ "actor/"
+  agent agent
+  artifact artifact
+  boundary boundary
+  card card
+  cloud cloud
+  component component
+  control control
+  database database
+  file file
+  folder folder
+  frame frame
+  interface interface
+  node node
+  package package
+  queue queue
+  rectangle rectangle
+  stack stack
+  storage storage
+  usecase usecase
+  usecase/ "usecase/"
+  entity entity
+  circle C1 as "circle"
+  collections collections
+  port port
+  portin portin
+  portout portout
+}
+
+component component_details [
+  component_details
+  ""monospaced aeiou""
+  -- dashes --
+  == equals ==
+  .. dots ..
+  __ underscores __
+  [[http://example.com {tooltip} hyperlink]]
+]
+
+frame link_decorators {
+  [aggregation] o-o [aggregation]
+  [arrow] <-> [arrow]
+  [arrow_triangle] <<->> [arrow_triangle]
+  [circle] 0-0 [circle]
+  [circle_connect] 0)-(0 [circle_connect]
+  [circle_fill] @-@ [circle_fill]
+  [composition] *-* [composition]
+  [defined_by] <|:-:|> [defined_by]
+  [extends] <|-|> [extends]
+  [extends] ^-^ [extends]
+  [half_arrow] -\\ [half_arrow]
+  [parenthesis] )-( [parenthesis]
+  [plus] +-+ [plus]
+  [redefines] <||-||> [redefines]
+  [square] #-# [square]
+
+  [middle_circle] -0- [foo]
+  [middle_circle_circled_1] -0)- [foo]
+  [middle_circle_circled_2] -(0- [foo]
+  [middle_circle_circled] -(0)- [foo]
+}
+
+frame link_styles {
+  [bold] == [bold]
+  [dashed] ~~ [dashed]
+  [dotted] .. [dotted]
+  [normal] -- [normal]
+}
+
+note as N1
+note
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+__ underscores __
+[[http://example.com {tooltip} hyperlink]]
+end note
+N1 .. [component_details]
+
+@enduml

@@ -1,0 +1,55 @@
+@startuml
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+actor actor
+
+usecase UC1 <<stereo>> as "
+usecase1
+-- dashes --
+== equals ==
+.. dots ..
+__ underscores __
+[[http://example.com {tooltip} hyperlink]]
+"
+
+(usecase2) as UC2
+
+UC2 <|-- UC1
+
+actor -> UC1 : arrow
+
+note as N1
+note1
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+__ underscores __
+[[http://example.com {tooltip} hyperlink]]
+end note
+UC1 .. N1
+
+note as N2
+note2
+end note
+N2 -- UC1
+N2 .. UC2
+
+package package {
+}
+
+rectangle rectangle {
+}
+
+@enduml

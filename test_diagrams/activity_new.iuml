@@ -1,0 +1,90 @@
+@startuml
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+|Swimlane1|
+
+start
+
+:activity;
+
+note right
+note
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+[[http://example.com {tooltip} hyperlink]]
+end note
+
+: procedure |
+: input <
+: output >
+: antisave /
+: save \\
+: task ]
+: continuous }
+
+card card {
+  : ;
+}
+
+partition partition {
+  : ;
+}
+package package {
+  : ;
+}
+rectangle rectangle {
+  : ;
+}
+
+(C)
+
+detach
+
+|Swimlane2|
+
+' TODO this causes an error when included
+'switch (switch)
+'case (case 1)
+':;
+'case (case 2)
+':;
+'case (case 3)
+': foo ;
+'endswitch
+
+repeat
+  :repeated;
+repeat while (repeat condition) is (yes)
+
+-[dotted]->no;
+
+fork
+  :fork 1;
+fork again
+  :fork 2;
+end fork
+
+if (condition 1) then (yes)
+  :Text 1;
+  kill
+elseif (condition 2) then (yes)
+  :Text 2;
+  stop
+else (nothing)
+  end
+endif
+
+@enduml

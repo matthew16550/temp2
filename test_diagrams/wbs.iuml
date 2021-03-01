@@ -1,0 +1,23 @@
+@startwbs
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
++ 1
+ + 2a
+ + 2c
+  - 3a
+  + 3b
+  + Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  + ""monospaced aeiou""
+
+@endwbs

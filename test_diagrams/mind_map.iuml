@@ -1,0 +1,34 @@
+@startmindmap
+
+!include ../themes/parakeet_plain.iuml
+
+header <&lightbulb> Header
+
+title <&lightbulb> Title
+
+legend <&lightbulb> Legend
+
+caption <&lightbulb> Caption
+
+footer <&lightbulb> Footer
+
+* <&flag> Root
+** Foo
+*** <s>123</s> => 456
+*** <s>abc</s> => def
+** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+**:multi
+line
+""monospaced aeiou""
+-- dashes --
+== equals ==
+.. dots ..
+[[http://example.com {tooltip} hyperlink]];
+**_ no box
+
+left
+
+** Bar
+** Baz
+
+@endmindmap
