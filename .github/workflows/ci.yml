@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'docs/example_images/**'
+      - gh-pages/example_images/**
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     name: Generate doc files
     runs-on: ubuntu-latest
     env:
-      EXAMPLE_IMAGES_DIR: docs/example_images
+      EXAMPLE_IMAGES_DIR: gh-pages/example_images
       PLANTUML_VERSION: 1.2021.1
     steps:
       - name: Checkout
