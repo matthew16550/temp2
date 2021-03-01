@@ -31,10 +31,16 @@ $table-border-color: $border-color;
   padding: 0.5rem 0;
 
   .btn {
-    padding: 0.3rem 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 
 .project-tagline, .site-footer {
   display: none;
+}
+
+.main-content {
+  .highlight pre {
+    padding: 0.3rem;
+  }
 }
